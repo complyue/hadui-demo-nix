@@ -34,11 +34,13 @@ log-level: DEBUG
 # see https://gitlab.haskell.org/ghc/ghc/issues/17348
 with-ghc: ghc-ife
 
-# options to be passed to ghci
+# additional options passed to GHCi
 ghci-options:
   # run project code compiled, instead of interpreted,
   # for performance
   - -fobject-code
 
+# additional options passed to both GHC and GHCi
+ghc-options:
   # limit parallelism on a developer's machine
-  - +RTS -maxN3 -RTS
+  - -with-rtsopts=-maxN3

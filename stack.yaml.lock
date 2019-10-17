@@ -3,30 +3,7 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages:
-- completed:
-    size: 305765
-    subdir: hadui
-    url: https://github.com/complyue/hadui/archive/582a00b0365498c9b4133158a273e8c4a34790fa.tar.gz
-    cabal-file:
-      size: 3643
-      sha256: cd0bb2f6b462035969493d72a2fb045ef6dcff935fdc36642546e8a71a35a866
-    name: hadui
-    version: 0.1.0.0
-    sha256: 7d1c7bfc209a06564c7a85eced172adf92e1df01267348c6c744ac49d87fac1d
-    pantry-tree:
-      size: 4121
-      sha256: 92eafe222c2c5dc71da7768ae1c4f590220ad90cfbc7bcc1857adaf1e05a1634
-  original:
-    subdir: hadui
-    url: https://github.com/complyue/hadui/archive/582a00b0365498c9b4133158a273e8c4a34790fa.tar.gz
-- completed:
-    hackage: network-3.1.1.0@sha256:c60e754c878bf769476c8f717ca36dfa54a5151d8aa058778decf92680ed3841,4268
-    pantry-tree:
-      size: 3297
-      sha256: aff9e181eb0db8aba669789f384f036d9cc436d47447fe6a45738ee019011683
-  original:
-    hackage: network-3.1.1.0
+packages: []
 snapshots:
 - completed:
     size: 524789

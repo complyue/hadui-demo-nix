@@ -8,7 +8,7 @@ where
 
 import           RIO
 
-import           HadUI
+import           UIO
 
 
 demoProcedure :: UIO ()

@@ -42,5 +42,21 @@ ghci-options:
 
 # additional options passed to both GHC and GHCi
 ghc-options:
+  # language features to be used
+  - -XScopedTypeVariables
+  - -XPartialTypeSignatures
+  - -XBlockArguments
+  - -XRankNTypes
+  - -XFlexibleContexts
+  - -XExistentialQuantification
+  - -XMultiParamTypeClasses
+  - -XFlexibleInstances
+  - -XGeneralizedNewtypeDeriving
+  - -XTypeFamilies
+  - -XUndecidableInstances
+  - -XBangPatterns
+  - -XLambdaCase
+  - -XQuasiQuotes
+
   # limit parallelism on a developer's machine
   - -with-rtsopts=-maxN3

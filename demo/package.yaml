@@ -15,8 +15,8 @@ category: Demo
 description: Please see the README on Github at <https://github.com/complyue/hadui-demo>
 
 dependencies:
-  - base >= 4.11 && < 10
-  - rio >= 0.1.8.0
+  - base
+  - rio
 
   - hadui
 

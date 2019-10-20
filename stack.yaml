@@ -2,15 +2,17 @@ resolver: lts-14.9
 
 packages:
   - demo
-
   # uncomment for quick development of local hadui
-  - ../hadui/hadui
+  # - ../hadui/hadui
 
 extra-deps:
-  #   - github: complyue/hadui
-  #     commit: 582a00b0365498c9b4133158a273e8c4a34790fa
-  #     subdirs:
-  #       - hadui
+  # uncomment for quick development of local hadui
+  # - ../hadui/hadui
+
+  - github: complyue/hadui
+    commit: a80490404eba19aaa77bdbb3bb1c41f6bb570826
+    subdirs:
+      - hadui
 
   # need this line until network-3.x goes into lts
   - network-3.1.1.0

@@ -31,7 +31,7 @@ ws-port: 5051
 log-level: DEBUG
 
 # need a GHC executable supports ':frontend <PluginModule>' command
-# see https://gitlab.haskell.org/ghc/ghc/issues/17348
+# see https://gitlab.haskell.org/ghc/ghc/issues/17348#note_228587
 with-ghc: ghc-ife
 
 # additional options passed to GHCi

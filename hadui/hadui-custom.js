@@ -6,8 +6,7 @@ import WSC from "/wsc.js";
 
 export const HaduiDefaultStmt =
   // the statement shown initially
-  `
-do
+  `do
   uiClearLog -- clear front UI log box
 
   uiLog $ TextMsg "This is a simple message."
@@ -21,7 +20,7 @@ do
 
   print "This log msg should appear on front UI."
   logInfo "This log msg should appear on backend."
-`.trim();
+`;
 
 export class HaduiWSC extends WSC {
   // implement ws methods here

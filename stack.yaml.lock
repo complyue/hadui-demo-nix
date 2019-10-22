@@ -5,6 +5,22 @@
 
 packages:
 - completed:
+    size: 311332
+    subdir: hadui
+    url: https://github.com/complyue/hadui/archive/master.tar.gz
+    cabal-file:
+      size: 4409
+      sha256: a99c815e40bdb5b333634d8e601ea598a670ab7bfd4a8dc4106937cfb0d5bd21
+    name: hadui
+    version: 0.1.0.0
+    sha256: 6cb4b90a72398820e4cb057c186b0f17a2ef978c18ef3881c6420a79ce4715e1
+    pantry-tree:
+      size: 4340
+      sha256: 8694214368c3689ab8d9d2d8dd0d2b145bbf34678071886bea853494d86936bc
+  original:
+    subdir: hadui
+    url: https://github.com/complyue/hadui/archive/master.tar.gz
+- completed:
     hackage: network-3.1.1.0@sha256:c60e754c878bf769476c8f717ca36dfa54a5151d8aa058778decf92680ed3841,4268
     pantry-tree:
       size: 3297

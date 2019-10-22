@@ -31,6 +31,7 @@ will appear in the browser's developer console on such pages -}
 
   -- control front UI from Haskell
   showRatingPage "_blank"
+  showStatefulRatingPage "_blank"
 `;
 
 export class HaduiWSC extends WSC {

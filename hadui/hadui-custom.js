@@ -28,8 +28,16 @@ will appear in the browser's developer console on such pages -}
 
   -- monad 'UIO' implements 'HasLogFunc', so you have logXXX
   logInfo "This log msg should appear on backend."
+
+  -- control front UI from Haskell
+  showRatingPage "_blank"
 `;
 
 export class HaduiWSC extends WSC {
   // implement ws methods here
+
+  // called by backend to update the rank shown on UI
+  updateRank(newRank) {
+    $("#rank").text("" + newRank);
+  }
 }

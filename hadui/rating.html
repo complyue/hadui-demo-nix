@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+
+<link rel="stylesheet" type="text/css" href="/vendor/mui/mui.min.css" />
+<script src="/vendor/jquery/jquery.js"></script>
+<script src="/vendor/mui/mui.min.js"></script>
+
+<div class="mui-container-fluid">
+  <div id="rank" class="mui--text-dark-secondary" style="font-size: 500%;">
+    0
+  </div>
+  <button id="uprate" class="mui-btn mui-btn--fab mui-btn--primary">👍🏻</button>
+  <button id="downrate" class="mui-btn mui-btn--fab mui-btn--danger">👎🏻</button>
+</div>
+
+<script type="module">
+  import { withHadui } from "/hadui.js";
+
+  let rankWidget = $("#rank");
+
+  // note the rank number passed to backend functions can go negative,
+  // so always enclose it within a pair of parenthesis.
+
+  $("#uprate").click(() =>
+    withHadui(ws => {
+      // call backend Haskell function to increase from what shown on UI
+      ws.send(`increaseRating (${parseInt(rankWidget.text())})`);
+    })
+  );
+  $("#downrate").click(() =>
+    withHadui(ws => {
+      // call backend Haskell function to decrease from what shown on UI
+      ws.send(`decreaseRating (${parseInt(rankWidget.text())})`);
+    })
+  );
+</script>

@@ -18,6 +18,9 @@ dependencies:
   - base
   - rio
 
+  - aeson
+  - aeson-qq
+
   - hadui
 
 ghc-options:

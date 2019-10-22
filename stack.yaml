@@ -1,4 +1,4 @@
-resolver: lts-14.9
+resolver: lts-14.11
 
 packages:
   - demo
@@ -7,7 +7,7 @@ packages:
 
 extra-deps:
   - github: complyue/hadui
-    commit: stable
+    commit: 928538323a0b6c1db621441cfd42366ee42b7d0e
     subdirs:
       - hadui
 

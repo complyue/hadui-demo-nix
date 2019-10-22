@@ -6,13 +6,10 @@ packages:
   # - ../hadui/hadui
 
 extra-deps:
-  # uncomment to use local version of hadui
-  - ../hadui/hadui
-
-  # - github: complyue/hadui
-  #   commit: a80490404eba19aaa77bdbb3bb1c41f6bb570826
-  #   subdirs:
-  #     - hadui
+  - github: complyue/hadui
+    commit: 5dd260fada86157998df985bfb6df38a430df5f6
+    subdirs:
+      - hadui
 
   # need this line until network-3.x goes into lts
   - network-3.1.1.0

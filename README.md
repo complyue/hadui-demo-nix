@@ -4,6 +4,6 @@
 stack build --exec hadui
 ```
 
-![hello world](https://user-images.githubusercontent.com/15646573/67106065-82cc7200-f1fc-11e9-81f3-f1d4b3495b62.png)
+![hadui-demo-2-fe](https://user-images.githubusercontent.com/15646573/67266190-2b6f2000-f4e2-11e9-91e7-14e29897d061.png)
 
-![hello world backend log](https://user-images.githubusercontent.com/15646573/67107253-ad1f2f00-f1fe-11e9-903c-a3a3e0eab906.png)
+![hadui-demo-2-be](https://user-images.githubusercontent.com/15646573/67266029-c74c5c00-f4e1-11e9-8d48-c5e40e43632f.png)

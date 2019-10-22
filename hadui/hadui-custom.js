@@ -6,8 +6,11 @@ import WSC from "/wsc.js";
 
 export const HaduiDefaultStmt =
   // the statement shown initially
-  `do
+  `do -- the statement here run in the 'UIO' monad
+  -- uiXXX and print output to the log box in frontend
   uiClearLog -- clear front UI log box
+
+  print "Hello, web front!"
 
   uiLog $ TextMsg "This is a simple message."
   uiLog $ DetailedMsg "This message conveys following details:" 
@@ -18,7 +21,12 @@ export const HaduiDefaultStmt =
             "This error message conveys following details:" 
             "the error details ..."
 
-  print "This log msg should appear on front UI."
+{- note:
+a hadui aware stack project can define various html pages for
+frontend UI, there can be no log box in some page, uiLog/print
+will appear in the browser's developer console on such pages -}
+
+  -- monad 'UIO' implements 'HasLogFunc', so you have logXXX
   logInfo "This log msg should appear on backend."
 `;
 

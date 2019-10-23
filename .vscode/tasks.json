@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "presentation": {
+        "reveal": "always",
+        "panel": "new"
+    },
+    "tasks": [
+        {
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "label": "hadui-dev",
+            "type": "shell",
+            "command": "cd ${workspaceRoot}; stack build --exec hadui-dev"
+        },
+        {
+            "group": "build",
+            "label": "stack build",
+            "type": "shell",
+            "command": "echo START_STACK_BUILD; cd ${workspaceRoot}; stack build; echo END_STACK_BUILD "
+        },
+        {
+            "group": "build",
+            "type": "shell",
+            "label": "stack clean & build",
+            "command": "echo START_STACK_CLEAN_AND_BUILD; cd ${workspaceRoot}; stack clean; stack build; echo END_STACK_CLEAN_AND_BUILD "
+        }
+    ]
+}

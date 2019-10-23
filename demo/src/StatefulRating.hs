@@ -32,51 +32,63 @@ showStatefulRatingPage target = do
 }|]
 
 
--- stateful rank changing functions, reacting to UI button clicks
+-- stateful rank showing/changing functions, initialize UI display and
+-- reacting to UI button clicks
+
+showCurrentRating :: UIO ()
+showCurrentRating = do
+    uio    <- ask
+    mbRank <- liftIO $ readMVar (haduiAppData uio)
+    let (currentRank :: Int) = case mbRank of
+            Nothing  -> 0
+            Just dyn -> fromDyn dyn 0
+    uiComm [aesonQQ|{
+"type": "call"
+, "name": "updateRank"
+, "args": #{currentRank}
+}|]
 
 increaseStatefulRating :: UIO ()
 increaseStatefulRating = do
-    uio                    <- ask
-    (currentRank, newRank) <-
-        liftIO $ modifyMVar (haduiAppData uio) $ \mbRank -> do
-            let (currentRank' :: Int) = case mbRank of
-                    Nothing  -> 0
-                    Just dyn -> fromDyn dyn 0
-                newRank' = currentRank' + 1
-            return ((Just $ toDyn newRank'), (currentRank', newRank'))
-
-    logInfo
-        $  display
-        $  "Increase rating from "
-        <> tshow currentRank
-        <> " to "
-        <> tshow newRank
-    uiComm [aesonQQ|{
+    uio <- ask
+    liftIO $ modifyMVar_ (haduiAppData uio) $ \mbRank -> do
+        let (currentRank :: Int) = case mbRank of
+                Nothing  -> 0
+                Just dyn -> fromDyn dyn 0
+            newRank = currentRank + 1
+        runUIO uio $ do
+            logInfo
+                $  display
+                $  "Increase rating from "
+                <> tshow currentRank
+                <> " to "
+                <> tshow newRank
+            uiComm [aesonQQ|{
 "type": "call"
 , "name": "updateRank"
 , "args": #{newRank}
 }|]
+        return $ Just $ toDyn newRank
 
 decreaseStatefulRating :: UIO ()
 decreaseStatefulRating = do
-    uio                    <- ask
-    (currentRank, newRank) <-
-        liftIO $ modifyMVar (haduiAppData uio) $ \mbRank -> do
-            let (currentRank' :: Int) = case mbRank of
-                    Nothing  -> 0
-                    Just dyn -> fromDyn dyn 0
-                newRank' = currentRank' - 1
-            return ((Just $ toDyn newRank'), (currentRank', newRank'))
-
-    logInfo
-        $  display
-        $  "Decrease rating from "
-        <> tshow currentRank
-        <> " to "
-        <> tshow newRank
-    uiComm [aesonQQ|{
+    uio <- ask
+    liftIO $ modifyMVar_ (haduiAppData uio) $ \mbRank -> do
+        let (currentRank :: Int) = case mbRank of
+                Nothing  -> 0
+                Just dyn -> fromDyn dyn 0
+            newRank = currentRank - 1
+        runUIO uio $ do
+            logInfo
+                $  display
+                $  "Decrease rating from "
+                <> tshow currentRank
+                <> " to "
+                <> tshow newRank
+            uiComm [aesonQQ|{
 "type": "call"
 , "name": "updateRank"
 , "args": #{newRank}
 }|]
+        return $ Just $ toDyn newRank
 

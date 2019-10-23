@@ -6,8 +6,29 @@
 <script src="/vendor/mui/mui.min.js"></script>
 
 <div class="mui-container-fluid">
-  <div id="rank" class="mui--text-dark-secondary" style="font-size: 500%;">
-    0
+  <div id="rank" class="mui--text-dark-secondary mui--text-display4">0</div>
+  <div class="mui-panel">
+    <div class="mui--text-dark mui--text-subhead">
+      when this page is opened, the figure above shows what the rank is atm.
+      <br />
+      when you click the buttons below, <br />
+      backend Haskell code is called to increase/decrease current rank, <br />
+      the new rank is then communicated back, to update the figure above.
+    </div>
+    <div
+      style="background-color:#444;"
+      class="mui--text-light mui--text-subhead"
+    >
+      refresh & click buttons in multiple windows displaying this page to get
+      the feel.
+    </div>
+    <div class="mui--text-accent">
+      only in publication mode (<i>hadui</i>), will multiple windows communicate
+      to each other; <br />
+      if run in development mode (<i>hadui-dev</i>), the state of rank in
+      backend is not shared, <br />
+      as each window is served by a dedicated backend process.
+    </div>
   </div>
   <button id="uprate" class="mui-btn mui-btn--fab mui-btn--primary">👍🏻</button>
   <button id="downrate" class="mui-btn mui-btn--fab mui-btn--danger">👎🏻</button>
@@ -16,7 +37,9 @@
 <script type="module">
   import { withHadui } from "/hadui.js";
 
-  let rankWidget = $("#rank");
+  withHadui(ws => {
+    ws.send(`showCurrentRating`);
+  });
 
   $("#uprate").click(() =>
     withHadui(ws => {

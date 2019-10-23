@@ -31,6 +31,9 @@ will appear in the browser's developer console on such pages -}
 
   -- control front UI from Haskell
   showRatingPage "_blank"
+
+  -- stateful version, see how multiple pages share the state
+  showStatefulRatingPage "_blank"
   showStatefulRatingPage "_blank"
 `;
 

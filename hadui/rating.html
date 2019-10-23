@@ -6,8 +6,19 @@
 <script src="/vendor/mui/mui.min.js"></script>
 
 <div class="mui-container-fluid">
-  <div id="rank" class="mui--text-dark-secondary" style="font-size: 500%;">
-    0
+  <div id="rank" class="mui--text-dark-secondary mui--text-display4">0</div>
+  <div class="mui-panel">
+    <div class="mui--text-dark mui--text-subhead">
+      when you click the buttons below, <br />
+      the current rank shown above is passed to backend Haskell code, <br />
+      to increase/decrease it, the result is then communicated back, <br />
+      to update the figure above.
+    </div>
+    <div class="mui--text-accent">
+      every time you open a new window displaying this page, <br />
+      the rank is initialize to <i>0</i> as local state. <br />
+      essential the same when you refresh the browser window.
+    </div>
   </div>
   <button id="uprate" class="mui-btn mui-btn--fab mui-btn--primary">👍🏻</button>
   <button id="downrate" class="mui-btn mui-btn--fab mui-btn--danger">👎🏻</button>

@@ -7,7 +7,7 @@ packages:
 
 extra-deps:
   - github: complyue/hadui
-    commit: 928538323a0b6c1db621441cfd42366ee42b7d0e
+    commit: 60eec1f9b5bee7c0bf95210cfc4a9fc8bfc802c5
     subdirs:
       - hadui
 

@@ -2,12 +2,14 @@ resolver: lts-14.11
 
 packages:
   - demo
-  # uncomment for quick development of local hadui
-  # - ../hadui/hadui
 
 extra-deps:
+  # to use the version of hadui checked out locally
+  #- ../hadui/hadui
+
+  # to use a version of hadui from github
   - github: complyue/hadui
-    commit: 60eec1f9b5bee7c0bf95210cfc4a9fc8bfc802c5
+    commit: f7c74c9b3c6ff8625bfbf6317ca3106495e54f33
     subdirs:
       - hadui
 

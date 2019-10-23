@@ -58,5 +58,10 @@ ghc-options:
   - -XLambdaCase
   - -XQuasiQuotes
 
-  # limit parallelism on a developer's machine
-  - -with-rtsopts=-maxN3
+# additional options passed to stack
+stack-options:
+  # dump stack trace on exception
+  - --trace
+  - --no-strip
+  - --no-library-stripping
+  - --no-executable-stripping

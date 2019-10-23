@@ -9,7 +9,7 @@ extra-deps:
 
   # to use a version of hadui from github
   - github: complyue/hadui
-    commit: f7c74c9b3c6ff8625bfbf6317ca3106495e54f33
+    commit: ce82b4f697baeef375c0b35401be523b559b13b0
     subdirs:
       - hadui
 

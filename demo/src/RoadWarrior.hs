@@ -6,12 +6,22 @@ module RoadWarrior where
 
 import           UIO
 
-import           Prelude                        ( head )
+import           Prelude                        ( head
+                                                , putStrLn
+                                                )
 
 default (Text,Int)
+
 
 fearless :: [Int] -> UIO ()
 fearless numbers = do
     print "I feel good!"
 
     print $ tshow (head numbers) <> " is my lucky number!"
+
+
+fearlessIO :: [Int] -> IO ()
+fearlessIO numbers = do
+    putStrLn "I feel good!"
+
+    putStrLn $ show (head numbers) ++ " is my lucky number!"

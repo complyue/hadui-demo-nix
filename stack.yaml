@@ -5,16 +5,16 @@ packages:
 
 extra-deps:
   # to use the version of hadui checked out locally
-  #- ../hadui/hadui
+  - ../hadui/hadui
 
   # to use a version of hadui from github
-  - github: complyue/hadui
-    commit: 8e62b0a33175393090745deb05144974195ed917
-    subdirs:
-      - hadui
+#   - github: complyue/hadui
+#     commit: 8e62b0a33175393090745deb05144974195ed917
+#     subdirs:
+#       - hadui
 
-build:
-  library-stripping: false
-  executable-stripping: false
+# build:
+#   library-stripping: false
+#   executable-stripping: false
 
 compiler-check: newer-minor

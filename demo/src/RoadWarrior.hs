@@ -25,3 +25,12 @@ fearlessIO numbers = do
     putStrLn "I feel good!"
 
     putStrLn $ show (head numbers) ++ " is my lucky number!"
+
+
+dare :: IO ()
+dare = do
+    fearlessIO [3, 7, 21]
+
+    fearlessIO []
+
+

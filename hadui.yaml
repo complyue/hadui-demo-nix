@@ -32,13 +32,13 @@ log-level: DEBUG
 
 # need a GHC executable supports ':frontend <PluginModule>' command
 # see https://gitlab.haskell.org/ghc/ghc/issues/17348#note_228587
-with-ghc: ghc-ife
+# with-ghc: ghc-ife
 
 # additional options passed to GHCi
 ghci-options:
   # run project code compiled, instead of interpreted,
   # for performance
-  - -fobject-code
+#   - -fobject-code
 
 # additional options passed to both GHC and GHCi
 ghc-options:
@@ -57,11 +57,3 @@ ghc-options:
   - -XBangPatterns
   - -XLambdaCase
   - -XQuasiQuotes
-
-# additional options passed to stack
-stack-options:
-  # dump stack trace on exception
-  - --trace
-  - --no-strip
-  - --no-library-stripping
-  - --no-executable-stripping

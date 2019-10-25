@@ -30,7 +30,4 @@ fearlessIO numbers = do
 dare :: IO ()
 dare = do
     fearlessIO [3, 7, 21]
-
     fearlessIO []
-
-

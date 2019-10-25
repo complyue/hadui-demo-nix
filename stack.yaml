@@ -5,16 +5,26 @@ packages:
 
 extra-deps:
   # to use the version of hadui checked out locally
-  - ../hadui/hadui
+  #- ../hadui/hadui
 
   # to use a version of hadui from github
-#   - github: complyue/hadui
-#     commit: 8e62b0a33175393090745deb05144974195ed917
-#     subdirs:
-#       - hadui
+  - github: complyue/hadui
+    commit: 73a8eb99ec49eab91e96b917cb14a82e464ee64a
+    subdirs:
+      - hadui
 
-# build:
-#   library-stripping: false
-#   executable-stripping: false
+compiler-check: match-exact
 
-compiler-check: newer-minor
+# CAVEATS
+#
+#   binary distributions referenced following have NO support, checkout:
+#
+# https://gitlab.haskell.org/complyue/ghc-ife-bindist/blob/master/README.md
+
+ghc-variant: ife
+
+setup-info:
+  ghc:
+    macosx-custom-ife:
+      8.6.5:
+        url: "https://gitlab.haskell.org/complyue/ghc-ife-bindist/raw/master/ghc-8.6.5-x86_64-apple-darwin.tar.xz"

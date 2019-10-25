@@ -13,7 +13,10 @@ stack build --exec hadui
 
 ## VSCode Integration
 
-with `.vscode/tasks.json` defined as:
+Setup your [VSCode](https://code.visualstudio.com) with
+[HIE](https://github.com/haskell/haskell-ide-engine)
+
+Create under the project root `.vscode/tasks.json` with following contents:
 
 ```json
 {
@@ -36,7 +39,7 @@ with `.vscode/tasks.json` defined as:
 }
 ```
 
-press `F7` to start `hadui-dev` for the project
+Press `F7` (macOS) or `Ctrl+Shift+B` (Linux) to start `hadui-dev` for the project
 
 ![hadui-vscode](https://user-images.githubusercontent.com/15646573/67378020-26c96b00-f5b9-11e9-9780-302db88ff50d.png)
 

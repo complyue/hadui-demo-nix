@@ -18,10 +18,10 @@ dependencies:
   - base
   - rio
 
+  - hadui
+
   - aeson
   - aeson-qq
-
-  - hadui
 
 ghc-options:
   - -Wall

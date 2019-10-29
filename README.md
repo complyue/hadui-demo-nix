@@ -1,4 +1,4 @@
-# demo for interactive stack project with hadui
+# demo for interactive stack project with Hadui
 
 ## Quick Start
 

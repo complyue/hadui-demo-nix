@@ -9,7 +9,7 @@ copyright: 2019 Compl Yue
 extra-source-files:
   - README.md
 
-synopsis: demo for interactive stack project with hadui
+synopsis: demo for interactive stack project with Hadui
 category: Demo
 
 description: Please see the README on Github at <https://github.com/complyue/hadui-demo>

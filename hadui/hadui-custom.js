@@ -22,7 +22,7 @@ export const HaduiDefaultStmt =
             "the error details ..."
 
 {- note:
-a hadui aware stack project can define various html pages for
+a Hadui aware stack project can define various html pages for
 frontend UI, there can be no log box in some page, uiLog/print
 will appear in the browser's developer console on such pages -}
 

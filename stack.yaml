@@ -4,10 +4,10 @@ packages:
   - demo
 
 extra-deps:
-  # to use the version of hadui checked out locally
+  # to use the version of Hadui checked out locally
   #- ../hadui/hadui
 
-  # to use a version of hadui from github
+  # to use a version of Hadui from github
   - github: complyue/hadui
     commit: 73a8eb99ec49eab91e96b917cb14a82e464ee64a
     subdirs:

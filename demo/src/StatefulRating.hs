@@ -17,18 +17,18 @@ default (Text, Int)
 
 
 showStatefulRatingPage :: Text -> UIO ()
-showStatefulRatingPage target = do
+showStatefulRatingPage windowName = do
     -- log to front UI
     print "Showing stateful rating page from Haskell code ..."
 
     -- log to backend
-    logInfo $ display $ "Showing stateful rating page in window " <> target
+    logInfo $ display $ "Showing stateful rating page in window " <> windowName
 
     -- do the trick
     uiComm [aesonQQ|{
 "type": "call"
 , "name": "openWindow"
-, "args": ["stateful-rating.html", #{target}]
+, "args": ["stateful-rating.html", #{windowName}]
 }|]
 
 

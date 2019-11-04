@@ -13,18 +13,18 @@ default (Text, Int)
 
 
 showRatingPage :: Text -> UIO ()
-showRatingPage target = do
+showRatingPage windowName = do
     -- log to front UI
     print "Showing rating page from Haskell code ..."
 
     -- log to backend
-    logInfo $ display $ "Showing rating page in window " <> target
+    logInfo $ display $ "Showing rating page in window " <> windowName
 
     -- do the trick
     uiComm [aesonQQ|{
 "type": "call"
 , "name": "openWindow"
-, "args": ["rating.html", #{target}]
+, "args": ["rating.html", #{windowName}]
 }|]
 
 

@@ -1,0 +1,39 @@
+cabal-version: 2.4
+
+name:               hadui-demo
+version:            0.1.0
+license:            BSD-3-Clause
+copyright:          2019 Compl Yue
+maintainer:         compl.yue@icloud.com
+author:             Compl Yue
+stability:          experimental
+homepage:           https://github.com/complyue/hadui
+bug-reports:        https://github.com/complyue/hadui/issues
+synopsis:           Web front UI for interactive Haskell projects
+description:
+    Please see the README on Github at <https://github.com/complyue/hadui>
+
+category:           Interactive,Development,Web,UI
+build-type:         Simple
+
+source-repository head
+  type: git
+  location: https://github.com/complyue/hadui-demo
+
+library
+  exposed-modules:
+      Rating
+      RoadWarrior
+      StatefulRating
+  other-modules:
+      Paths_hadui_demo
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+    base
+    , rio
+    , hadui
+    , aeson
+    , aeson-qq
+  default-language: Haskell2010

@@ -32,7 +32,8 @@ log-level: DEBUG
 
 # target component(s) to be loaded into GHCi
 # * mandatory for Cabal based Hadui projects
-#     `cabal repl` expects you to specify the TARGET explicitly
+#     `cabal v2-repl` expects you to specify the TARGET which
+#      resolves to one and only one component explicitly
 # * optional for Stack based Hadui projects
 #     all components will be loaded by default
 # * ignored for barebone Hadui projects

@@ -36,7 +36,8 @@ log-level: DEBUG
 # * optional for Stack based Hadui projects
 #     all components will be loaded by default
 # * ignored for barebone Hadui projects
-#     you are expected to craft a proper `.ghci` script
+#     you should enjoy crafting a `.ghci` script to control how
+#     GHCi shall behave for interactions with web front
 ghci-targets: []
 
 # additional options passed to GHCi

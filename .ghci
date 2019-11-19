@@ -1,0 +1,5 @@
+
+:set -i./hadui-demo/src
+
+:load RoadWarrior Rating StatefulRating
+:m + RoadWarrior Rating StatefulRating

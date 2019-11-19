@@ -18,7 +18,7 @@ build-type:         Simple
 
 source-repository head
   type: git
-  location: https://github.com/complyue/hadui-demo
+  location: https://github.com/complyue/hadui-demo-nix
 
 library
   exposed-modules:

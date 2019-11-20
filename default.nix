@@ -2,8 +2,8 @@
 import (
 # to use a version of Hadui from github
   builtins.fetchTarball {
-    url = "https://github.com/complyue/hadui/archive/0.1.0.rc3.tar.gz";
-    sha256 = "1pa13r33smzni1r263sbz3q2iay4qyavmcxpaslafzc1rh548hbj";
+    url = "https://github.com/complyue/hadui/archive/0.1.0.1.tar.gz";
+    sha256 = "0bvhbfspkd0d7b1bwlc82v8j17ylydh2blkp1jrqgljr7c0356z3";
   }
 
   # to use the version of Hadui checked out locally

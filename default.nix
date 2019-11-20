@@ -9,7 +9,7 @@ import (
   # to use the version of Hadui checked out locally
   #../hadui
 ) (args // {
-  overlays = [
+  overlays = (args.overlays or [ ]) ++ [
     (self: super:
       let
         myHaskellPackageSet = super.haskellPackages.override {
@@ -29,5 +29,5 @@ import (
           };
         };
       })
-  ] ++ (args.overlays or [ ]);
+  ];
 })
